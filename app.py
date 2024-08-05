@@ -13,9 +13,7 @@ import base64
 from pathlib import Path
 
 
-#### API
-# OPENAI_API_KEY = "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"
-# openai.api_key = OPENAI_API_KEY
+
 
 
 #### functions
@@ -133,21 +131,12 @@ messages = [
     {"role": "user", "content": gpt_input}
 ]
 
-# Generate assistant response
-# response = openai.ChatCompletion.create(
-#     model="gpt-3.5-turbo",
-#     messages=messages,
-#     temperature=0.7,
-#     max_tokens=25,
-#     top_p=1,
-#     frequency_penalty=0.2,
-#     presence_penalty=0.2
-# )
+
 
 selected_template = random.choice(response_templates)
 
 content_list = []
-# gpt = " " + response.choices[0].message["content"] +"\n" + selected_template
+
 gpt = selected_template
 
 if st.button('Recommend'):
